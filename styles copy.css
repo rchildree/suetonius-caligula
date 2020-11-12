@@ -1,27 +1,29 @@
 /* ---------------------------- FONT IMPORTS -------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:400&display=swap');
+
 @font-face {
-	font-family: 'Literata';
+	font-family: 'Source Serif Pro';
 	font-style: normal;
 	font-weight: 400;
-	src: url(fonts/Literata12pt-Regular.ttf) format('woff2');
+	src: url(fonts/ssp.woff2) format('woff2');
 }
 @font-face {
-	font-family: 'Literata';
+	font-family: 'Source Serif Pro';
 	font-style: italic;
 	font-weight: 400;
-	src: url(fonts/Literata12pt-Italic.ttf) format('woff2');
+	src: url(fonts/sspi.woff2) format('woff2');
 }
 @font-face {
-	font-family: 'Literata';
+	font-family: 'Source Serif Pro';
 	font-style: normal;
 	font-weight: 800;
-	src: url(fonts/Literata12pt-Bold.ttf) format('woff2');
+	src: url(fonts/sspb.woff2) format('woff2');
 }
 @font-face {
-	font-family: 'Literata';
+	font-family: 'Source Serif Pro';
 	font-style: italic;
 	font-weight: 800;
-	src: url(fonts/Literata12pt-BoldItalic.ttf) format('woff2');
+	src: url(fonts/sspbi.woff2) format('woff2');
 }
 
 /* ---------------------------- HOUSEKEEPING -------------------------------------------------- */
@@ -29,8 +31,8 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Literata', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
-	font-size: clamp(14px, 1.2vw, 30px);
+	font-family: 'Source Serif Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
+	font-size: clamp(16px, 1.35vw, 30px);
 }
 
 html{scroll-padding-top: 160px;}
@@ -46,9 +48,8 @@ html{scroll-padding-top: 160px;}
 }
 
 body {
-	/* background-image: url(/images/graypebbled.png); */
+	background-color: #F3F4F3;
 	/* background-color: #e3e3f0; */
-	background-color: rgb(242, 239, 233);
 	margin: 0;
 	display: grid;
 	grid-template-columns: 210px 1fr;
@@ -103,7 +104,7 @@ hgroup {padding-left: 15px;}
 hgroup h1, hgroup h2, hgroup h2 i, nav label {
 	color: #ffffff;
 	font-weight: 400;
-	font-size: 18px;
+	font-size: 20px;
 	line-height: 24px;
 	font-feature-settings: "onum", "pnum";
 }
@@ -232,8 +233,7 @@ section {
 	padding: 25px 25px;
 	background-color: #ffffff;
 	border-radius: 3px;
-	border: 1.5px solid #00000040;
-	box-shadow: 0px 0px 20px 2px #00000019;
+	/* border: 1.5px solid var(--dark-border) */
 }
 
 h3 {
@@ -244,7 +244,7 @@ h3 {
 }
 
 p {
-	line-height: 1.7rem;
+	line-height: 1.6rem;
 	position: relative;
 }
 
@@ -293,7 +293,7 @@ section+section {
 }
 
 .grk{
-	/* font-family: 'EB Garamond', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI'; */
+	font-family: 'EB Garamond', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
 }
 
 .lac{
