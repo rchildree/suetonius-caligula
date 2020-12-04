@@ -36,7 +36,7 @@
 html{scroll-padding-top: 160px;}
 
 :root{
-	--color-dark: #333B49;
+	--color-dark: rgb(51, 59, 73);
 	--color-mid: #333B49;
 	--color-mid-light: #8195b8;
 	--color-light: #d2def3;
@@ -104,9 +104,9 @@ nav {
 	padding: 25px 35px 0;
 	justify-content: space-between;
 	/* max-height: 50%; */
-	/* z-index: 1; */
-	/* background-color: #2c2c3d; */
-	background-color: #333B49;
+	z-index: 1;
+	background-color: #333b49;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='408' height='49' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%2379d3da' stroke-width='2.3' stroke-opacity='0.175'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
 	padding-bottom: 35px;
 	/* padding:20px; */
 	/* border-top: 1px solid #041344; */
