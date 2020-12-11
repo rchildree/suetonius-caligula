@@ -30,10 +30,10 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Literata', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
-	font-size: clamp(14px, 1.4vw, 30px);
+	font-size: clamp(14px, 1.4vw, 28px);
 }
 
-html{scroll-padding-top: 160px;}
+html{scroll-padding-top: 45vh;}
 
 :root{
 	--bg-gray: #f1f0f0;
@@ -65,26 +65,26 @@ header {
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='408' height='49' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%2379d3da' stroke-width='2.3' stroke-opacity='0.3'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
 }
 
-hgroup h1, hgroup h2, nav label {
+nav h1 {
 	color: #f3f3f3;
 	font-weight: 400;
-	font-size: 1.1rem;
-	line-height: 26px;
-	display: inline-block;
+	font-size: .75rem;
 	font-feature-settings: "onum", "pnum";
 }
 
-hgroup h1 {font-feature-settings: "c2sc", "smcp";}
-hgroup h2 {font-style: italic;}
-
+nav h1 span {
+	font-size: inherit;
+}
 
 /* ---------------------------- Menu ----------------------------------------------------------- */
 nav {
+	width: 65ch;
+	margin: 0 auto;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	align-content: center;
-	padding: 15px 50px;
+	align-items: center;
+	padding: 15px 0;
 }
 
 nav input {display: none;}
@@ -93,7 +93,11 @@ nav input:checked ~ .nav__list {display:grid;}
 nav input:checked ~ label>#menu {display:none;}
 nav input:checked ~ label>#close {display:block;}
 
-nav label {color: #fff;cursor: pointer;user-select: none;margin-top:4px;height:24px;width:24px}
+nav label {
+	color: #fff;
+	cursor: pointer;
+	user-select: none;
+}
 nav label>svg {width: 24px;fill:#fff;}
 nav label>svg:hover {fill:var(--dark-blue);}
 nav label>#close{display: none;}
@@ -106,9 +110,9 @@ nav label>#close{display: none;}
 	justify-content: space-between;
 	list-style-type: none;
 	background-color: #ffffff;
-	border: 1px solid var(--dark-blue);
-	margin-top: 20px;
-	padding: 15px;
+	border: 1px solid #00000080;
+	margin: 20px 0 15px;
+	padding: 10px;
 	column-gap: 10px;
 	/* transition: background-color 5s ease-in; */
 }
@@ -313,8 +317,9 @@ section+section {
 		background-color: #ffffff;
 		width:100%;
 	}
-	nav {padding: 20px 35px;}
+	nav {width:100%;padding: 15px 35px;}
 	aside {box-shadow: none;}
+	#info {width: 100%;}
 	#info li {line-height: 1.2rem;}
 	section {
 		border: none;
@@ -328,7 +333,6 @@ section+section {
 	}
 	footer {
 		justify-content: center;
-		overflow: ;
 	}
 	footer p {display:none;}
 	footer object {margin:0 0 0 -35px;}
