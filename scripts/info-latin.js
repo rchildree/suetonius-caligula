@@ -143,10 +143,11 @@ const doInfo = function(event) {
 		let wordDef = (mousedWord.dataset.def) ? mousedWord.dataset.def : " ";
 		let infoBox = 
 			`
-				<li><span id="citation">${wordCite}</span></li>
-				<li><span class="entry">${wordForm}</span></li>
-				<li><span style="font-feature-settings: 'c2sc', 'smcp';">${wordPos}</span></li>
-				<li style="margin-top:1rem; ">${wordDict}</li>
+				<li id="firstline">
+					<span id="citation">${wordCite}</span><span id="entry">${wordForm}</span>
+				</li>
+				<li id="pos">${wordPos}</li>
+				<li style="margin-top:5px">${wordDict}</li>
 				<li><em>${wordDef}</em></li>
 			`;
 		document.querySelector("#info").innerHTML = infoBox;
