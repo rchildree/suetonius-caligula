@@ -1,45 +1,36 @@
 /* ---------------------------- FONT IMPORTS -------------------------------------------------- */
 @font-face {
-	font-family: 'Literata';
+	font-family: 'EBGaramond';
+	src: url('fonts/EBGaramond-VAR.ttf') format('truetype-variations');
+	font-weight: 400 900;
 	font-style: normal;
-	font-weight: 400;
-	src: url(fonts/Literata12pt-Regular.ttf) format('woff2');
-}
+   }
+   
 @font-face {
-	font-family: 'Literata';
+	font-family: 'EBGaramond';
+	src: url('fonts/EBGaramond-Italic-VAR.ttf') format('truetype-variations');
+	font-weight: 400 900;
 	font-style: italic;
-	font-weight: 400;
-	src: url(fonts/Literata12pt-Italic.ttf) format('woff2');
-}
-@font-face {
-	font-family: 'Literata';
-	font-style: normal;
-	font-weight: 800;
-	src: url(fonts/Literata12pt-Bold.ttf) format('woff2');
-}
-@font-face {
-	font-family: 'Literata';
-	font-style: italic;
-	font-weight: 800;
-	src: url(fonts/Literata12pt-BoldItalic.ttf) format('woff2');
-}
+   }
 
 /* ---------------------------- HOUSEKEEPING -------------------------------------------------- */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Literata', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
-	font-size: clamp(15px, 1.4vw, 28px);
-	font-variant-ligatures: common-ligatures;
+	font-family: 'EBGaramond', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
+	font-size: clamp(20px, 1.7vw, 40px);
+	font-weight: 450;
 }
 
 html{scroll-padding-top: 45vh;}
 
 :root{
 	--bg-gray: #f1f0f0;
-	--title-blue: #099cec;
-	--info-lightblue: #e3f9ff;
+	--title-blue: #1a4a58;
+	--title-red: #c52f36;
+	--info-lightblue: #d4eaf3;
+	--info-lightred: #FDF6F6;
 	--dark-blue: #333b49;
 	--highlight: #ec0951;
 	
@@ -52,7 +43,7 @@ html{scroll-padding-top: 45vh;}
 }
 
 body {
-	background-color: var(--bg-gray);
+	background-color: #fafafa;
 	overflow-x:hidden;
 }
 
@@ -60,10 +51,10 @@ body {
 header {
 	position: sticky;
 	top:0;
-	background-color: var(--title-blue);
+	background-color: var(--title-red);
 	width: 100%;
 	z-index: 1;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='408' height='49' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%2379d3da' stroke-width='2.3' stroke-opacity='0.3'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='408' height='49' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='white' stroke-width='8' stroke-opacity='0.05'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 /* ---------------------------- Menu ----------------------------------------------------------- */
@@ -100,7 +91,7 @@ nav label {
 	user-select: none;
 }
 nav label>svg {width: 24px;fill:#fff;}
-nav label>svg:hover {fill:var(--dark-blue);}
+nav label>svg:hover {fill: #000000;}
 nav label>#close{display: none;}
 
 .nav__list {
@@ -122,7 +113,7 @@ nav ul a{
 	display: block;
 	text-decoration: none;
 	color: #000000;
-	font-size: 13px;
+	font-size: 18px;
 	padding: .25rem;
 }
 
@@ -136,8 +127,7 @@ aside {
 	width: 100%;
 	z-index: 2;
 	padding: 25px 35px;
-	background-color: var(--info-lightblue);
-	border-top: 2px solid var(--title-blue);
+	background-color: var(--info-lightred);
 	border-bottom: 1.5px solid #00000040;
 	box-shadow: 0px 20px 20px -20px #00000019;
 }
@@ -155,7 +145,7 @@ aside {
 
 #info li {
 	font-size: .75rem;
-	line-height: 1rem;
+	line-height: .8rem;
 	text-decoration: none;
 	color: #2c2c3d;
 }
@@ -173,7 +163,7 @@ aside {
 }
 
 #entry {
-	font-weight: bold;
+	font-weight: 800;
 	font-size: 1rem;
 	line-height: 1rem;
 }
@@ -187,7 +177,7 @@ em {
 
 b {
 	color: #CA1E47;
-	font-weight: bold;
+	font-weight: 800;
 	font-size: .75rem;
 }
 
@@ -203,7 +193,7 @@ footer {
 	left:0;
 	bottom:0;
 	background-color: var(--title-blue);
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='408' height='49' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%2379d3da' stroke-width='2.3' stroke-opacity='0.3'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+	/* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='408' height='49' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%2379d3da' stroke-width='2.3' stroke-opacity='0.3'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E"); */
 	height:75px;
 	color: white;
 }
@@ -211,6 +201,7 @@ footer {
 footer object {
 	margin-right: auto;
 	max-width: 160px;
+	display: none;
 }
 
 footer a {
@@ -237,13 +228,13 @@ section {
 
 h3 {
 	/* text-align: center; */
-	font-weight: normal;
+	font-weight: 425;
 	font-style: italic;
 	margin-bottom: .5rem;
 }
 
 p {
-	line-height: 1.7rem;
+	line-height: 1.6rem;
 	position: relative;
 }
 
@@ -263,7 +254,7 @@ p::before, .textnote::before {
 
 p:hover::before {
 	opacity:1;
-	font-weight:bold;
+	font-weight: 800;
 	color: var(--highlight);
 }
 
