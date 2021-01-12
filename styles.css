@@ -70,8 +70,8 @@ nav {
 
 nav h1 {
 	color: #f3f3f3;
-	font-weight: 400;
-	font-size: .75rem;
+	font-size: 21px;
+	font-weight: 450;
 	font-feature-settings: "onum", "pnum";
 }
 
@@ -89,8 +89,11 @@ nav label {
 	color: #fff;
 	cursor: pointer;
 	user-select: none;
+	height: 24px;
 }
-nav label>svg {width: 24px;fill:#fff;}
+nav label>svg {
+	fill:#fff;
+	align-self: baseline;}
 nav label>svg:hover {fill: #000000;}
 nav label>#close{display: none;}
 
@@ -106,7 +109,6 @@ nav label>#close{display: none;}
 	margin: 20px 0 15px;
 	padding: 10px;
 	column-gap: 10px;
-	/* transition: background-color 5s ease-in; */
 }
 
 nav ul a{
@@ -147,7 +149,7 @@ aside {
 	font-size: .75rem;
 	line-height: .8rem;
 	text-decoration: none;
-	color: #2c2c3d;
+	color: #360d0d;
 }
 
 #firstline {text-indent:-4rem}
