@@ -94,7 +94,7 @@ nav label {
 nav label>svg {
 	fill:#fff;
 	align-self: baseline;}
-nav label>svg:hover {fill: #000000;}
+nav label>svg:hover {fill: #360d0d;}
 nav label>#close{display: none;}
 
 .nav__list {
