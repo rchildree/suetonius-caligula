@@ -146,8 +146,8 @@ aside {
 }
 
 #info li {
-	font-size: .75rem;
-	line-height: .8rem;
+	font-size: .85rem;
+	line-height: .9rem;
 	text-decoration: none;
 	color: #360d0d;
 }
@@ -313,7 +313,7 @@ section+section {
 	nav {width:100%;padding: 10px 35px;}
 	aside {box-shadow: none;}
 	#info {width: 100%;}
-	#info li {line-height: 1.2rem;}
+	#info li {font-size: .9rem;line-height: .9rem;}
 	section {
 		border: none;
 		box-shadow: none;
