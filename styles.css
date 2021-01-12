@@ -90,10 +90,13 @@ nav label {
 	cursor: pointer;
 	user-select: none;
 	height: 24px;
+	font-size: 21px;
 }
 nav label>svg {
 	fill:#fff;
-	align-self: baseline;}
+	position:relative;
+	top:0;
+	height:24px;}
 nav label>svg:hover {fill: #360d0d;}
 nav label>#close{display: none;}
 
