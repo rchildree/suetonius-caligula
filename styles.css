@@ -204,8 +204,7 @@ footer {
 
 footer object {
 	margin-right: auto;
-	max-width: 160px;
-	display: none;
+	width: 86px;
 }
 
 footer a {
