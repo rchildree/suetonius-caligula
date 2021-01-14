@@ -210,7 +210,7 @@ footer object {
 footer a {
 	color:white;
 	text-decoration: none;
-	font-size: .5rem;
+	font-size: .75rem;
 }
 
 /* ---------------------------- MAIN ---------------------------------------------------------- */
@@ -330,5 +330,5 @@ section+section {
 		justify-content: center;
 	}
 	footer p {display:none;}
-	footer object {margin:0 0 0 -35px;}
+	footer object {margin:0;}
 }
