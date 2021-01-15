@@ -116,17 +116,17 @@ function doPOS(tag) {
 			}
 	}};
 	if (tag[0] === "n" || tag[0] === "a" || tag[0] === "p" || tag[0] === "m") {
-		answer = (wordPos[7] + " " + wordPos[2] + " " + wordPos[6] + " " + wordPos[8]);
+		answer = `${wordPos[7]} ${wordPos[2]} ${wordPos[6]} ${wordPos[8]}`;
 	} else if (tag[4] === "p") { // participle: 
-		answer = (wordPos[3] + " " + wordPos[5] + " " + wordPos[4] + ", " + wordPos[7] + " " + wordPos[2] + " " + wordPos[6]);
+		answer = `${wordPos[3]} ${wordPos[5]} ${wordPos[4]} ${wordPos[7]} ${wordPos[2]} ${wordPos[6]}`;
 	} else if (tag[4] === "n") { // infinitive: 
-		answer = (wordPos[3] + " " + wordPos[5] + " " + wordPos[4]);
+		answer = `${wordPos[3]} ${wordPos[5]} ${wordPos[4]}`;
 	} else if (tag[4] === "g" || tag[4] === "d") { // gerund / gerundive: 
-		answer = (wordPos[4] + ", " + wordPos[7] + " " + wordPos[2] + " " + wordPos[6]);
+		answer = `${wordPos[4] + ", " + wordPos[7]} ${wordPos[2]} ${wordPos[6]}`;
 	} else if (tag[0] === "v") { // verbs: 12 3 5 4
-		answer = (wordPos[1] + wordPos[2] + " " + wordPos[3] + " " + wordPos[5] + " " + wordPos[4]);
+		answer = `${wordPos[1]} ${wordPos[2]} ${wordPos[3]} ${wordPos[5]} ${wordPos[4]}`;
 	} else if (tag[0]) { // the rest
-		answer = wordPos[0];
+		answer = `${wordPos[0]}`;
 	};
 	return answer;
 };
