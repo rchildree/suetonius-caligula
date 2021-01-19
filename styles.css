@@ -13,12 +13,37 @@
 	font-style: italic;
    }
 
+/* -------- */
+@font-face {
+	font-family: 'Libertinus';
+	src: url('fonts/LibertinusSerif-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Libertinus';
+	src: url('fonts/LibertinusSerif-Italic.woff2') format('woff2');
+	font-weight: 400;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Libertinus';
+	src: url('fonts/LibertinusSerif-Bold.woff2') format('woff2');
+	font-weight: 800;
+	font-style: normal;
+   }
+@font-face {
+	font-family: 'Libertinus';
+	src: url('fonts/LibertinusSerif-BoldItalic.woff2') format('woff2');
+	font-weight: 900;
+	font-style: italic;
+   }
 /* ---------------------------- HOUSEKEEPING -------------------------------------------------- */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: /*'Libertinus Serif',*/'EBGaramond', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
+	font-family: 'EBGaramond', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
 	font-size: clamp(20px, 1.7vw, 40px);
 	font-weight: 450;
 	font-feature-settings: "liga";
@@ -236,8 +261,15 @@ h3 {
 	font-weight: 450;
 	/* font-style: italic; */
 	margin-bottom: .75rem;
-	font-feature-settings: 'c2sc', 'smcp','onum';
+	font-feature-settings: 'smcp','c2sc','onum';
 	border-bottom: 2px solid var(--title-red);
+}
+
+h3::before {
+	content: ')';
+	font-feature-settings: 'ss04';
+	color: var(--title-red);
+	margin-right: 12px;
 }
 
 p {
