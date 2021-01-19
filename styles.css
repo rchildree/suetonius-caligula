@@ -18,11 +18,10 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'EBGaramond', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
+	font-family: /*'Libertinus Serif',*/'EBGaramond', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
 	font-size: clamp(20px, 1.7vw, 40px);
 	font-weight: 450;
 	font-feature-settings: "liga";
-	font-variant-alternates: character-variant(cv11);
 }
 
 html{scroll-padding-top: 45vh;}
@@ -175,7 +174,8 @@ aside {
 	line-height: 1rem;
 }
 
-#pos{font-feature-settings: 'c2sc', 'smcp';}
+#pos{font-feature-settings: 'c2sc', 'smcp','onum';
+	font-variant-alternates: character-variant(cv11);}
 
 em {
 	font-style: italic;
@@ -233,9 +233,11 @@ section {
 
 h3 {
 	/* text-align: center; */
-	font-weight: 425;
-	font-style: italic;
-	margin-bottom: .5rem;
+	font-weight: 450;
+	/* font-style: italic; */
+	margin-bottom: .75rem;
+	font-feature-settings: 'c2sc', 'smcp','onum';
+	border-bottom: 2px solid var(--title-red);
 }
 
 p {
