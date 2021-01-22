@@ -40,8 +40,8 @@ html{scroll-padding-top: 45vh;}
 	--dark-border: #303844;
 
 	--furple: #9dd6e1;
-	--ros-dkblue: rgb(0, 34, 65);
-	--ros-liblue: rgb(237, 240, 242);
+	--ros-dkblue: #002241;
+	--ros-liblue: #edf0f2;
 	
 }
 
@@ -244,15 +244,15 @@ h3 {
 	/* font-style: italic; */
 	margin-bottom: .75rem;
 	font-feature-settings: 'smcp','c2sc','onum';
-	border-bottom: 2px solid var(--highlight);
+	border-bottom: 1.5px solid var(--ros-dkblue);
 }
 
-h3::before {
+/* h3::before {
 	content: ')';
 	font-feature-settings: 'ss04';
 	color: var(--highlight);
 	margin-right: 12px;
-}
+} */
 
 p {
 	line-height: 1.6rem;
