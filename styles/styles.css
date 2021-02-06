@@ -41,7 +41,8 @@ html{scroll-padding-top: 45vh;}
 
 	--furple: #9dd6e1;
 	/* --ros-dkblue: #002241; */
-	--ros-dkblue: #23445f;
+	/* --ros-dkblue: #23445f; */
+	--ros-dkblue: #3f3358;
 	--ros-liblue: #edf0f2;
 	
 }
