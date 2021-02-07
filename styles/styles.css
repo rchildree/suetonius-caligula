@@ -18,7 +18,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'EBGaramond', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
-	font-size: clamp(20px, 1.7vw, 40px);
+	font-size: clamp(20px, 1.9vw, 40px);
 	font-weight: 450;
 	font-feature-settings: "liga";
 }
@@ -145,7 +145,7 @@ aside {
 #info{
 	width: 65ch;
 	margin: 0 auto;
-	padding-bottom:40px;
+	padding-bottom:30px;
 	position: relative;
 	list-style-type: none;
 	/* border-bottom: 1.5px solid #0000000e; */
@@ -158,8 +158,8 @@ aside {
 }
 
 #info li {
-	font-size: .85rem;
-	line-height: .9rem;
+	font-size: .75rem;
+	line-height: .8rem;
 	text-decoration: none;
 	/* color: #360d0d; */
 }
@@ -171,15 +171,15 @@ aside {
 	font-feature-settings: "lnum", "tnum";
 	display: inline-block;
 	width: 4rem;
-	font-size: .75rem;
+	font-size: .65rem;
 	padding-right: .75rem;
 	text-align: right;
 }
 
 #entry {
 	font-weight: 800;
-	font-size: 1rem;
-	line-height: 1rem;
+	font-size: .9rem;
+	line-height: .9rem;
 }
 
 #pos{font-feature-settings: 'c2sc', 'smcp','onum';
