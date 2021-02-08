@@ -2,16 +2,24 @@
 @font-face {
 	font-family: 'EBGaramond';
 	src: url('../fonts/EBGaramond-VAR.ttf') format('truetype-variations');
-	font-weight: 400 700;
+	font-weight: 450;
 	font-style: normal;
 }
    
 @font-face {
 	font-family: 'EBGaramond';
 	src: url('../fonts/EBGaramond-Italic-VAR.ttf') format('truetype-variations');
-	font-weight: 400 700;
+	font-weight: 450;
 	font-style: italic;
 }
+
+@font-face {
+	font-family: 'EBGaramond';
+	src: url('../fonts/EBGaramond-Bold.otf') format('opentype');
+	font-weight: 700;
+}
+
+
 /* ---------------------------- HOUSEKEEPING -------------------------------------------------- */
 * {
 	margin: 0;
