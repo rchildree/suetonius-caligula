@@ -59,7 +59,7 @@ const tagCatalog = [
 			{"value": "m", "expanded": "imperat."}, 
 			{"value": "d", "expanded": "gerund"}, 
 			{"value": "g", "expanded": "gerundive"}, 
-			{"value": "@", "expanded": "supine"}, 
+			{"value": "u", "expanded": "supine"}, 
 			{"value": "p", "expanded": "ppl."}
 		]
 	},
@@ -121,7 +121,7 @@ function doPOS(tag) {
 		answer = `${wordPos[3]} ${wordPos[5]} ${wordPos[4]}, ${wordPos[7]} ${wordPos[2]} ${wordPos[6]}`;
 	} else if (tag[4] === "n") { // infinitive: 
 		answer = `${wordPos[3]} ${wordPos[5]} ${wordPos[4]}`;
-	} else if (tag[4] === "g" || tag[4] === "d") { // gerund / gerundive: 
+	} else if (tag[4] === "g" || tag[4] === "d" || tag[4] === "u") { // gerund / gerundive / supine: 
 		answer = `${wordPos[4] + ", " + wordPos[7]} ${wordPos[2]} ${wordPos[6]}`;
 	} else if (tag[0] === "v") { // verbs: 12 3 5 4
 		answer = `${wordPos[1]} ${wordPos[2]} ${wordPos[3]} ${wordPos[5]} ${wordPos[4]}`;
