@@ -42,16 +42,16 @@ html{scroll-padding-top: 45vh;}
 	--dark-blue: #333b49;
 	--highlight: #ec0951;
 	
-	--color-mid: #333B49;
+	--color-mid: #493346;
 	--color-mid-light: #8195b8;
 	--color-light: #d2def3;
 	--dark-border: #303844;
 
 	--furple: #9dd6e1;
-	--ros-dkblue: #001a30; 
-	/* --ros-dkblue: #002241;  the original */
-	--ros-liblue: #edf0f2;
-	
+	--ros-dkblue: #07b9dd; 
+	/* --ros-dkblue: #002241; */
+	/* --ros-liblue: #edf0f2; */
+	--ros-liblue: #f1efec;
 }
 
 body {
@@ -104,11 +104,9 @@ nav label {
 	font-size: 21px;
 }
 nav label>svg {
-	fill:#fff;
 	position:relative;
 	top:0;
 	height:24px;}
-nav label>svg:hover {fill: #360d0d;}
 nav label>#close{display: none;}
 
 .nav__list {
@@ -119,7 +117,7 @@ nav label>#close{display: none;}
 	justify-content: space-between;
 	list-style-type: none;
 	background-color: #ffffff;
-	border: 1px solid #00000080;
+	border-radius: 5px;
 	margin: 20px 0 15px;
 	padding: 10px;
 	column-gap: 10px;
