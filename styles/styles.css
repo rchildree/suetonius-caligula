@@ -326,13 +326,12 @@ section+section {
 
 /* ---------------------------- RESPONSIVE ---------------------------------------------------- */
 
-@media screen and (max-width:800px){
+@media screen and (max-width:750px){
 
 	body {
 		background-color: #ffffff;
 		width:100%;
 	}
-	header {border-bottom: 2px solid var(--ros-dkblue);}
 	nav {width:100%;padding: 10px 35px;}
 	aside {box-shadow: none;}
 	#info {width: 100%;padding-bottom:25px;}
