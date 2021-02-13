@@ -305,9 +305,9 @@ section+section {
 	font-style: italic;
 }
 
-/* .grk{
-	font-family: 'EB Garamond', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
-} */
+.grk{
+	font-family: 'Neohellenic','EB Garamond', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
+}
 
 .lac{
 	color:var(--highlight);
