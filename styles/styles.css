@@ -68,8 +68,11 @@ body {
 header {
 	position: sticky;
 	top:0;
-	background-color: var(--ros-dkblue);
 	width: 100%;
+	background-color: var(--ros-dkblue);
+	/* background-image: url(../images/inusum.svg);
+	background-repeat: no-repeat;
+	background-position: 10px 10px; */
 	z-index: 1;
 }
 
@@ -93,6 +96,11 @@ nav h1 {
 
 nav h1 span {
 	font-size: inherit;
+}
+
+nav object {
+	margin-left: auto;
+	margin-right: 25px;
 }
 
 nav input {display: none;}
@@ -222,7 +230,7 @@ footer {
 
 footer object {
 	margin-right: auto;
-	width: 86px;
+	width: 75px;
 }
 
 footer a {
