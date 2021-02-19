@@ -258,7 +258,7 @@ h3 {
 	font-weight: 450;
 	/* font-style: italic; */
 	margin-bottom: .75rem;
-	font-feature-settings: 'smcp','c2sc','onum';
+	font-feature-settings: 'smcp','c2sc','onum','pnum';
 	border-bottom: 1.5px solid var(--ros-dkblue);
 }
 
