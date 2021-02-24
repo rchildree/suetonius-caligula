@@ -116,11 +116,12 @@ nav label {
 	height: 24px;
 	font-size: 21px;
 }
-nav label>svg {
+nav svg {
 	position:relative;
 	top:0;
 	height:24px;}
-nav label>#close{display: none;}
+nav svg:hover {opacity: .5;}
+nav #close{display: none;}
 
 .nav__list {
 	display: none;
@@ -230,7 +231,7 @@ footer {
 
 footer object {
 	margin-right: auto;
-	width: 50px;
+	width: 96px;
 }
 
 footer a {
