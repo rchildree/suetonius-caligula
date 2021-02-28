@@ -13,21 +13,16 @@
 
 <body>
 
-	<header>
-		<nav>
-			<hgroup>
-				<h1>Suetonius</h1>
-				<h2><em>Caligula</em></h2>
-				<!-- <span>Edited R. Childree</span> -->
-			</hgroup>
-			<!-- <object data="images/inusum.svg" type="image/svg+xml" height="10"></object> -->
-			<input type="checkbox" class="nav__toggle" id="contents_button">
-			<label for="contents_button">
-				<svg id="menu" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 17H18" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M6 7H18" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M6 12H18" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
-				<svg id="close" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37259 5.37258 0 12 0C18.6274 0 24 5.37259 24 12ZM12 13.9091L7.84615 18L5.7087 15.8949L9.86255 11.804L6 8L8.13745 5.89493L12 9.69896L15.8625 5.89493L18 8L14.1375 11.804L18.2913 15.8949L16.1538 18L12 13.9091Z" fill="white"/></svg>
-			</label>
+<header>
+	<nav>
+		<input type="checkbox" class="nav__toggle" id="contents_button">
+		<label for="contents_button">
+			<svg id="menu" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 17H18" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M6 7H18" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M6 12H18" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+			<svg id="close" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37259 5.37258 0 12 0C18.6274 0 24 5.37259 24 12ZM12 13.9091L7.84615 18L5.7087 15.8949L9.86255 11.804L6 8L8.13745 5.89493L12 9.69896L15.8625 5.89493L18 8L14.1375 11.804L18.2913 15.8949L16.1538 18L12 13.9091Z" fill="white"/></svg>
+		</label>
 
-			<ul class="nav__list">
+		<div class="nav__list">
+			<ul>
 				<li class="nav__item"><a href="#1" class="nav__link" onclick="contents_button.click()">1</a></li>
 				<li class="nav__item"><a href="#2" class="nav__link" onclick="contents_button.click()">2</a></li>
 				<li class="nav__item"><a href="#3" class="nav__link" onclick="contents_button.click()">3</a></li>
@@ -89,19 +84,24 @@
 				<li class="nav__item"><a href="#59" class="nav__link" onclick="contents_button.click()">59</a></li>
 				<li class="nav__item"><a href="#60" class="nav__link" onclick="contents_button.click()">60</a></li>
 			</ul>
-		</nav>
-		<object data="images/iuno.svg" type="image/svg+xml" height="50"></object>
-	</header>
+		</div>
+		<hgroup>
+			<h1>Suetonius</h1>
+			<h2><em>Caligula</em></h2>
+			<!-- <span>Edited R. Childree</span> -->
+		</hgroup>
+	</nav>
+	<object data="images/iuno.svg" type="image/svg+xml" height="50"></object>
+</header>
 
+<aside>
+	<ul id="info">
+		<li>&nbsp;</li>
+		<li id="message" style="margin-top:5px">Mouseover a word for information.<br>Click for dictionary lookup.<br>&nbsp;</li>
+	</ul>
+</aside>
 
 <main id="main">
-		<aside>
-			<ul id="info">
-				<li>&nbsp;</li>
-				<li id="message" style="margin-top:5px">Mouseover a word for information.<br>Click for dictionary lookup.<br>&nbsp;</li>
-			</ul>
-		</aside>
-
 <section>
 <h3>Germanicus (1–7)</h3>
 	<p id="1">
@@ -2144,7 +2144,7 @@
 		<span data-cite="16.2" data-lookup="populus" data-dict="populus –ī m." data-def="people" data-pos="n-s---md-">populō</span>
 		<span data-cite="16.2" data-lookup="reddo" data-dict="reddō reddere reddidī redditus" data-def="to return" data-pos="v--pna---">reddere</span>.
 	<b>3</b>
-		<span data-cite="16.3" data-lookup="legatum" data-dict="legātum –ī n." data-def="legacy, bequest" data-pos="n-p---na-">lēgāta</span>
+		<span data-cite="16.3" data-lookup="legatum" data-dict="lēgātum –ī n." data-def="legacy, bequest" data-pos="n-p---na-">lēgāta</span>
 		<span data-cite="16.3" data-lookup="ex" data-dict="ē / ex" data-def="out of, from" data-pos="r--------">ex</span>
 		<span data-cite="16.3" data-lookup="testamentum" data-dict="testāmentum testāmentī n." data-def="will" data-pos="n-s---nb-">testāmentō</span>
 		<span data-cite="16.3" data-lookup="Tiberius" data-dict="Tiberius –(i)ī m." data-def="Tiberius" data-pos="n-s---mg-">Tiberī</span>,

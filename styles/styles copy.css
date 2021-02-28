@@ -18,11 +18,6 @@
 	src: url('../fonts/EBGaramond-Bold.otf') format('opentype');
 	font-weight: 700;
 }
-@font-face {
-	font-family: 'Neohellenic';
-	src: url('../fonts/Neohellenic-Regular.otf') format('opentype');
-	font-weight: 400;
-}
 
 
 /* ---------------------------- HOUSEKEEPING -------------------------------------------------- */
@@ -53,54 +48,76 @@ html{scroll-padding-top: 45vh;}
 	--dark-border: #303844;
 
 	--furple: #9dd6e1;
+	/* --ros-dkblue: #0769DD;  */
 	--ros-dkblue: #07b9dd; 
+	/* --ros-dkblue: #333b49;  */
 	/* --ros-dkblue: #002241; */
 	/* --ros-liblue: #edf0f2; */
 	--ros-liblue: #f1efec;
+
+	--width-prose: 65ch;
+	--width-poetry: 55ch;
+	--width-longline: 70ch;
+
+	--sidebar-width: 224px;
 }
 
 body {
 	background-color: var(--ros-liblue);
 	overflow-x:hidden;
+	display: grid;
+	grid-template-columns: var(--sidebar-width) 1fr;
+	grid-template-rows: 1fr;
+	gap: 2rem 0;
+	grid-template-areas: "Sidebar Main";
 }
 
 /* ---------------------------- HEADER -------------------------------------------------------- */
 header {
-	position: sticky;
+	grid-area: Sidebar;
+	position: fixed;
 	top:0;
-	width: 100%;
-	background-color: var(--ros-dkblue);
-	/* background-image: url(../images/inusum.svg);
-	background-repeat: no-repeat;
-	background-position: 10px 10px; */
-	z-index: 1;
-}
-
-/* ---------------------------- Menu ----------------------------------------------------------- */
-nav {
-	width: 65ch;
-	margin: 0 auto;
+	width: var(--sidebar-width);
+	height: 100vh;
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10px 0;
+	padding: 20px;
+	background-color: var(--ros-dkblue);
+}
+/* ---------------------------- Menu ----------------------------------------------------------- */
+nav {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	align-items: flex-start;
 }
 
-nav h1 {
-	color: #ffffff;
+nav hgroup {width: calc(100% - 24px)}
+
+nav hgroup h1, h2 {
+	color: #f3f3f3;
 	font-size: 21px;
+	line-height: 19px;
 	font-weight: 450;
 	font-feature-settings: "onum", "pnum";
 }
 
-nav h1 span {
+nav hgroup h1 {
+	font-feature-settings: "c2sc", "smcp";
+	letter-spacing: .05em;
+}
+nav hgroup h2 {
+	line-height: 28px;
+}
+nav hgroup span {
 	font-size: inherit;
 }
 
 nav object {
-	margin-left: auto;
-	margin-right: 25px;
+	margin-top: auto;
+	width: 100%;
 }
 
 nav input {display: none;}
@@ -110,38 +127,43 @@ nav input:checked ~ label>#menu {display:none;}
 nav input:checked ~ label>#close {display:block;}
 
 nav label {
-	color: #fff;
 	cursor: pointer;
 	user-select: none;
 	height: 24px;
 	font-size: 21px;
+	margin-left:auto;
 }
-nav svg {
+nav label>svg {
 	position:relative;
 	top:0;
 	height:24px;}
-nav svg:hover {opacity: .5;}
-nav #close{display: none;}
+nav label>#close{display: none;}
+
+nav label > svg:hover {opacity: .5;}
 
 .nav__list {
 	display: none;
 	width: 100%;
-	grid-template-columns: repeat(auto-fit, 1.25rem);
+	max-height: 75vh;
+	grid-template-columns: repeat(auto-fit, .75rem);
 	justify-items: center;
 	justify-content: space-between;
 	list-style-type: none;
 	background-color: #ffffff;
-	border-radius: 5px;
+	/* border-radius: 5px; */
 	margin: 20px 0 15px;
 	padding: 10px;
 	column-gap: 10px;
+	/*overflow-y: scroll;*/
 }
 
 nav ul a{
 	display: block;
 	text-decoration: none;
+	/*font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';*/
+	font-feature-settings: "tnum";
 	color: #000000;
-	font-size: 18px;
+	font-size: 14px !important;
 	padding: .25rem;
 }
 
@@ -152,24 +174,23 @@ nav ul a:hover {
 
 /* ---------------------------- PARSING --------------------------------------------------------- */
 aside {
-	width: 100%;
-	z-index: 2;
+	position: sticky; top: 0; left: var(--sidebar-width);
+	width: calc(100vw - var(--sidebar-width));
+	z-index: 5;
 	padding: 25px 35px 0;
 	background-color: var(--ros-liblue);
-	/* border-bottom: 1.5px solid #00000040; */
-	/* box-shadow: 0px 20px 20px -20px #00000019; */
 }
 
 #info{
-	width: 65ch;
+	width: var(--width-prose);
 	margin: 0 auto;
 	padding-bottom:30px;
 	position: relative;
 	list-style-type: none;
-	/* border-bottom: 1.5px solid #0000000e; */
-	/* box-shadow: 0px 20px 20px -20px #00000019; */
-
 }
+
+main.poetry #info {width: var(--width-poetry)}
+main.comedy #info  {width: var(--width-longline)}
 
 #message{
 	opacity:.2;
@@ -215,7 +236,7 @@ b {
 
 /* ---------------------------- Footer ---------------------------------------------------------- */
 
-footer {
+/* footer {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -231,23 +252,25 @@ footer {
 
 footer object {
 	margin-right: auto;
-	width: 96px;
+	width: 86px;
 }
 
 footer a {
 	color:white;
 	text-decoration: none;
 	font-size: 18px;
-}
+	display: inline-flex;
+} */
 
 /* ---------------------------- MAIN ---------------------------------------------------------- */
 main {
+	grid-area: Main;
 	width: 100%;
 	margin: 0 0 50px;
 }
 
 section {
-	width: calc(65ch + 70px);
+	width: calc(var(--width-prose) + 70px);
 	padding: 35px;
 	margin: 0 auto;
 	background-color: #ffffff;
@@ -259,7 +282,7 @@ h3 {
 	font-weight: 450;
 	/* font-style: italic; */
 	margin-bottom: .75rem;
-	font-feature-settings: 'smcp','c2sc','onum','pnum';
+	font-feature-settings: 'smcp','c2sc','onum';
 	border-bottom: 1.5px solid var(--ros-dkblue);
 }
 
@@ -307,6 +330,13 @@ section+section {
 	margin-top: 2rem;
 }
 
+main.elegiac [data-ln]:nth-child(odd){
+	text-indent:1.5rem;
+}
+main.poetry section {width: calc(var(--width-poetry) + 70px)}
+main.comedy section {width: calc(var(--width-longline) + 70px)}
+main.poetry p+p {margin-top:0;}
+
 .peo+.peo{
 	margin-top:0;
 }
@@ -319,9 +349,9 @@ section+section {
 	font-style: italic;
 }
 
-.grk{
-	font-family: 'Neohellenic','EB Garamond', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
-}
+/* .grk{
+	font-family: 'EB Garamond', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
+} */
 
 .lac{
 	color:var(--highlight);
@@ -340,20 +370,42 @@ section+section {
 
 /* ---------------------------- RESPONSIVE ---------------------------------------------------- */
 
-@media screen and (max-width:750px){
+@media screen and (max-width:1024px){
 
 	body {
 		background-color: #ffffff;
 		width:100%;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		gap: 0;
+		grid-template-areas: "Main" "Sidebar";
 	}
-	nav {width:100%;padding: 10px 35px;}
-	nav object {display: none;}
-	aside {box-shadow: none;}
+	header {
+		grid-area: Sidebar;
+		position: sticky;
+		bottom:0;
+		width: 100%;
+		height: 50px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 35px;
+		background-color: var(--ros-dkblue);
+		z-index: 3;
+	}
+	nav {width: auto;}
+	nav hgroup h1, h2 {display: inline-block;}
+	nav hgroup {width: 50vw;}
+	nav input, nav label, nav ul {display:none;}
+	nav object {width: 75px;}
+	aside {
+		left: 0;
+		width: 100%
+	}
 	#info {width: 100%;padding-bottom:25px;}
 	#info li {font-size: .9rem;line-height: .9rem;}
 	section {
-		border: none;
-		box-shadow: none;
 		width: 100%;
 	}
 	#firstline {text-indent:0}
@@ -361,9 +413,5 @@ section+section {
 		width: auto;
 		text-align: left;
 	}
-	footer {
-		justify-content: center;
-	}
-	footer p {display:none;}
-	footer object {margin:0;}
-}
+	
+} /* close responsive bit */
