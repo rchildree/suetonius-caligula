@@ -238,13 +238,6 @@ h3 {
 	border-bottom: 1.5px solid var(--ros-dkblue);
 }
 
-/* h3::before {
-	content: ')';
-	font-feature-settings: 'ss04';
-	color: var(--highlight);
-	margin-right: 12px;
-} */
-
 p {
 	line-height: 1.6rem;
 	position: relative;
@@ -322,14 +315,16 @@ main.poetry p+p {margin-top:0;}
 
 /* ---------------------------- RESPONSIVE ---------------------------------------------------- */
 
-@media screen and (max-width:1024px){
+@media screen and (max-width:800px){
 
 	body {
 		background-color: #ffffff;
 		width:100%;
 	}
+	section {width: 100%;}
+	#firstline {text-indent: 0;}
 	#info {padding-bottom:25px;}
-	#info li {font-size: .9rem;line-height: .9rem;} */
+	#info li {font-size: .9rem;line-height: .9rem;}
 	#citation {
 		width: auto;
 		text-align: left;
