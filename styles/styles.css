@@ -81,7 +81,7 @@ nav hgroup {
 }
 
 nav hgroup h1, nav hgroup h2 {
-	display: inline-flex;
+	display: inline-block;
 	color: #f3f3f3;
 	font-size: 21px;
 	font-weight: 450;
