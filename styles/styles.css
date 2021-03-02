@@ -41,7 +41,8 @@ html{scroll-padding-top: 45vh;}
 :root{
 	--bg-gray: #f1efec;
 	--highlight: #ec0951;
-	--ros-dkblue: #07b9dd; 
+	--ros-dkblue: #07b9dd;
+	--ros-dkrblue: #024755;
 	--ros-liblue: #f1efec;
 
 	--width-prose: 65ch;
@@ -124,7 +125,7 @@ nav label > svg:hover {opacity: .5;}
 	margin: 0;
 	padding: 35px 35px 0;
 	align-content: center;
-	background-color: #07b9dd;	
+	background-color: var(--ros-dkblue);	
 }
 
 .nav__list ul {
@@ -155,7 +156,9 @@ nav ul a{
 
 nav ul a:hover {
 	font-weight: 700;
-	color: var(--highlight);
+	color: #ffffff;
+	background: var(--ros-dkblue);
+	border-radius: 5px;
 }
 
 /* ---------------------------- PARSING --------------------------------------------------------- */
