@@ -36,7 +36,7 @@
 	font-feature-settings: "liga";
 }
 
-html{scroll-padding-top: 33vh;}
+html{scroll-padding-top: 45vh;}
 
 :root{
 	--bg-gray: #f1efec;
@@ -66,7 +66,7 @@ header {
 	align-items: center;
 	padding: 0 35px;
 	background-color: var(--ros-dkblue);
-	z-index: 3;
+	z-index: 6;
 }
 /* ---------------------------- Menu ----------------------------------------------------------- */
 nav {
@@ -95,7 +95,7 @@ nav hgroup h1 {
 
 nav input {display: none;}
 
-nav input:checked ~ .nav__list {display:block;}
+nav input:checked ~ .nav__list {display:flex;}
 nav input:checked ~ label>#menu {display:none;}
 nav input:checked ~ label>#close {display:block;}
 
@@ -120,21 +120,26 @@ nav label > svg:hover {opacity: .5;}
 	left:0;
 	bottom:50px;
 	width:100%;
+	height:calc(100vh - 50px);
 	margin: 0;
-	padding: 0 35px;
+	padding: 35px 35px 0;
+	align-content: center;
 	background-color: #07b9dd;	
 }
 
 .nav__list ul {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, 1rem);
+	grid-template-columns: repeat(auto-fit, 1.25rem);
+	align-self: center;
 	justify-items: center;
 	justify-content: space-between;
 	list-style-type: none;
 	background-color: #ffffff;
 	border-radius: 5px;
-	margin: 20px 0 15px;
-	padding: 16px;
+	width: 80%;
+	height: min-content;
+	margin: 20px auto 15px;
+	padding: 48px;
 	column-gap: 10px;
 	/*overflow-y: scroll;*/
 }
