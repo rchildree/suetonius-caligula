@@ -128,7 +128,7 @@ nav label > svg:hover {opacity: .5;}
 
 .nav__list ul {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, 1.25rem);
+	grid-template-columns: repeat(auto-fit, minmax(4ch,1fr));
 	align-self: center;
 	justify-items: center;
 	justify-content: space-between;
@@ -140,6 +140,7 @@ nav label > svg:hover {opacity: .5;}
 	margin: 0 auto;
 	padding: 48px;
 	column-gap: 10px;
+	white-space: nowrap;
 	/*overflow-y: scroll;*/
 }
 
@@ -183,7 +184,7 @@ aside.comedy #info  {width: var(--width-longline)}
 }
 
 #info li {
-	font-size: max(18px, .75rem);
+	font-size: max(16px, .75rem);
 	line-height: .8rem;
 	text-decoration: none;
 }
