@@ -41,8 +41,8 @@ html{scroll-padding-top: 45vh;}
 :root{
 	--bg-gray: #f1efec;
 	--highlight: #ec0951;
+	--ros-dkblue: #383f58;
 	--ros-liblue: #07b9dd;
-	--ros-dkblue: #024755;
 
 	--width-prose: 65ch;
 	--width-poetry: 55ch;
@@ -67,6 +67,7 @@ header {
 	padding: 0 35px;
 	background-color: var(--ros-liblue);
 	z-index: 6;
+	background-color: var(--ros-liblue);
 }
 /* ---------------------------- Menu ----------------------------------------------------------- */
 nav {
